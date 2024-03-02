@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-
+import React, { useState } from 'react';
+import axios from "axios";
 const Students = () => {
     const [name,setName]=useState("")
     const [gender,setGender]=useState("")
@@ -8,9 +8,14 @@ const Students = () => {
 
     const handleSubmit=()=>{
         const obj={
-            name,gender,age,skill
+            name,gender,skill,age
         }
-        console.log("obj:",obj)
+        // console.log("obj:",obj)
+
+        const PostData = axios.post("http://localhost:5000/register",obj);
+        // const getdata = axios.get("http://localhost:5000/register").then((res)=>console.log(res))
+        console.log(PostData)
+        
     }
   return (
     <div>
