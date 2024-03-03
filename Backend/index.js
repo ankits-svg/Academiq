@@ -10,9 +10,6 @@ const cors = require('cors');
 
 app.use(cors());
 
-const mongoDBURL = "mongodb+srv://Anku:Brahman_45@cluster0.krbzesh.mongodb.net/sckillforms?retryWrites=true&w=majority";
-
-
 mongoose.connect(mongoDBURL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
